@@ -9,16 +9,16 @@ dandelion.txtSim(
   {
     "string1": {
       "type":"url",
-      "value":"https://en.wikipedia.org/wiki/Batman"
+      "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBatman"
     },
     "string2":{
       "type":"url",
-      "value":"https://en.wikipedia.org/wiki/Spider-Man"
+      "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
     },
     "lang":"en",
     "bow":"never"
   },
   function(results){
-      console.log(results)
+      console.log(results.similarity)
   }
 );
