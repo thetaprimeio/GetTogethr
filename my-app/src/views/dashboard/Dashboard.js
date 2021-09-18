@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import CustomizationPanel from './customizationPanel/CustomizationPanel';
+import RoomAllocationPanel from './roomAllocationPanel/RoomAllocationPanel';
+import PlatformsPanel from './platformsPanel/PlatformsPanel';
+
 function Dashboard(){
 
     return(
@@ -13,6 +17,11 @@ function Dashboard(){
             > 
             Main Page
         </Link>
+
+        <CustomizationPanel />
+        <RoomAllocationPanel />
+        <PlatformsPanel />
+
         </div>
     );
 }

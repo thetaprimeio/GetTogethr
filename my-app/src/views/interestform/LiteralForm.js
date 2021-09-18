@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
 const LiteralForm = () => (
     <Formik
@@ -8,7 +9,9 @@ const LiteralForm = () => (
         onSubmit={(values, { setSubmitting }) => {
 
             setTimeout(() => {
-   
+              
+              RoomData[0].users.push(values.name);
+
               alert(JSON.stringify(values, null, 2));
    
               setSubmitting(false);
