@@ -3,7 +3,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
-const LiteralForm = () => (
+function LiteralForm(){
+    
+    return(
     <Formik
         initialValues={{ email: '', name: '', interest1: '', interest2: '', interest3: '', interest4: '', interest5: ''}}
         onSubmit={(values, { setSubmitting }) => {
@@ -53,6 +55,7 @@ const LiteralForm = () => (
    
           )}
     </Formik>
-);
+    );
+}
 
 export default LiteralForm;
