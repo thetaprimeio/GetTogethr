@@ -1,3 +1,4 @@
+![Alt text](GetTogethr.png "GetTogethr")
 ## Inspiration
 Our team is composed of engineering science students with a passion for software engineering. We believe that the increased reliance on virtual communication services during the COVID19 pandemic has generated new business opportunities for innovative software solutions that help people to generate meaningful social connections. Our desire to contribute to these innovations has led us to develop GetTogethr, an application which helps organizations put together virtual social events for employees to discover their common interests and build new relationships.
 ## What it does
