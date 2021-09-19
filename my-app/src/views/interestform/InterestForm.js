@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import LiteralForm from './LiteralForm';
 // import {FormBuilder} from 'native-base-form-builder';
 
-
 function InterestForm(){
 
     return(
