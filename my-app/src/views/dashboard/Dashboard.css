@@ -19,11 +19,11 @@
   }
   
   .flex-item {
-    /* background: tomato; */
+    background: tomato;
     border-style: solid;
     border-color: black;
     padding: 5px;
-    width: 200px;
+    width: 250px;
     height: 150px;
     margin-top: 10px;
     line-height: 10px;
@@ -33,4 +33,18 @@
     text-align: center;
   }
   
-  
+  .roomContainer{
+    display: none;
+    /* visibility: hidden; */
+  }
+
+  .hideButton{
+    background: white;
+    border-color: white;
+    text-emphasis-color: white;
+    text-decoration-color: white;
+    color: white;
+    border-color: white;
+    border-style: solid;
+
+  }

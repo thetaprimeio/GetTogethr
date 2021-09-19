@@ -1,8 +1,15 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import './CustomizationPanel.css';
 
-const CustomizationPanel = () => (
+class CustomizationPanel extends React.Component{
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+render(){
+  return(
     <div>
       <h2>Customization</h2>
       <Formik
@@ -10,8 +17,10 @@ const CustomizationPanel = () => (
           onSubmit={(values, { setSubmitting }) => {
 
               setTimeout(() => {
-    
-                alert(JSON.stringify(values, null, 2));
+                
+                this.props().isHidden = !this.props().isHidden;
+
+                document.getElementById("roomContainer").style.display = "block";
     
                 setSubmitting(false);
     
@@ -23,16 +32,16 @@ const CustomizationPanel = () => (
     
             {({ isSubmitting }) => (
     
-              <Form>
+              <Form class="question-box">
 
                 <label htmlFor="eventName">Event Name</label>
-                <Field type="text" name="eventName" />
+                <Field class="padding" type="text" name="eventName" />
                 <br/>
                 <label htmlFor="numUsersPerRoom"># Users Per Room</label>
-                <Field type="text" name="numUsersPerRoom" />
+                <Field class="padding" type="text" name="numUsersPerRoom" />
                 <br/>
                 <label htmlFor="numRooms"># of Rooms</label>
-                <Field type="text" name="numRooms" />
+                <Field class="padding" type="text" name="numRooms" />
                 <br/>
                 <button type="submit" disabled={isSubmitting}>Assign Rooms</button>
     
@@ -42,5 +51,7 @@ const CustomizationPanel = () => (
       </Formik>
     </div>
 );
+            }
+}
 
 export default CustomizationPanel;
