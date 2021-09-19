@@ -3,8 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
-//<link rel="stylesheet" href="LiteralForm.css">
-
 function LiteralForm(){
     
     return(

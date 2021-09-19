@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './RoomAllocationPanel.css';
-//import './RoomAllocationPanel2.css';
 
 import roomData from './RoomData';
 

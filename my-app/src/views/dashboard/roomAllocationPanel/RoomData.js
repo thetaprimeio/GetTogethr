@@ -1,3 +1,5 @@
+// Contains data to setup the demo quickly.
+
 const roomData = [
     {
         name: "Pets",

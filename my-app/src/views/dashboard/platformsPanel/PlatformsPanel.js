@@ -3,7 +3,6 @@ import React from 'react';
 import zoomLogo from '../../../images/zoom-logo-removebg.png';
 import teamsLogo from '../../../images/teams-logo-removebg.png';
 import webexLogo from '../../../images/webex-logo-removebg.png';
-// import meetLogo from '../../../images/meet-logo.png';
 import meetLogo from '../../../images/meet-logo-removebg.png';
 
 

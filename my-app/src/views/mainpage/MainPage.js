@@ -8,7 +8,6 @@ const loadRoomData = () => (
 );
 
 function MainPage(){
-    //loadRoomData()
     return(
         <div>
             <h1>Main Page</h1>
