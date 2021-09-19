@@ -22,7 +22,7 @@
   .flex-item {
     /* background: tomato; */
     border-style: solid;
-    border-color: black;
+    border-color: #76A2BE;
     padding: 5px;
     width: 200px;
     height: 150px;
@@ -39,9 +39,10 @@
     transition: 0.3s;
     text-align: center;
     border-radius: 5px; /* 5px rounded corners */
-    width: 150px;
+    width: 300px;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: #76A2BE;
 
   }
 
@@ -61,4 +62,8 @@
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+  }
+
+  .background-box{
+    background-color: #76A2BE;
   }

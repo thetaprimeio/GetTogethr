@@ -16,6 +16,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    background-color: #76A2BE;
   }
   
   .flex-item {
@@ -39,12 +40,27 @@
   }
 
   .hideButton{
-    background: white;
-    border-color: white;
-    text-emphasis-color: white;
-    text-decoration-color: white;
-    color: white;
-    border-color: white;
+    background: #76A2BE;
+    border-color: #76A2BE;
+    text-emphasis-color: #76A2BE;
+    text-decoration-color: #76A2BE;
+    color: #76A2BE;
+    border-color: #76A2BE;
     border-style: solid;
 
   }
+
+
+.center-screen-full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .center-screen {
+    align-items: center;
+    text-align: center; 
+  }
+

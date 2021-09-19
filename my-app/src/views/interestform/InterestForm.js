@@ -12,13 +12,13 @@ function InterestForm(){
             <center><h1>&nbsp;</h1></center>
             <center><h1>&nbsp;</h1></center>
             <center><h1>&nbsp;</h1></center>
-            <center><h1>InterestForm</h1></center>
+            <center><h1>GetTogethr - Interest Form</h1></center>
             <center><Link 
                 className="btn btn-pink"
                 role="button"
-                to="/"
+                to="/dashboard"
                 > 
-                Main Page
+                Admin Dashboard
             </Link></center>
             <LiteralForm />
         </div>

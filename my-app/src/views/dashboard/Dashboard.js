@@ -22,16 +22,19 @@ class Dashboard extends React.Component{
 
     render(){ 
         return(
-            <div>
-                <button class="hideButton" onClick={this.toggleHidden.bind(this)} >Click</button>
-                <h1>Admin Dashboard</h1>
-                <Link 
-                    className="btn btn-pink"
-                    role="button"
-                    to="/"
-                    > 
-                    Main Page
-                </Link>
+            <div class="background-screen">
+                <div class="center-screen">
+                    <button class="hideButton" onClick={this.toggleHidden.bind(this)} >Click</button>
+                    <h1>GetTogethr - Admin Dashboard</h1>
+                    <Link 
+                        className="btn btn-pink"
+                        role="button"
+                        to="/form"
+                        > 
+                        Interest Form
+                    </Link>
+                </div>
+                {/* <hr> */}
                 <div class="flex-container">
                     <CustomizationPanel class="flex-item"/>
                     <PlatformsPanel class="flex-item"/>

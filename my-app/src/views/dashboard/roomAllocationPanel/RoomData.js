@@ -1,23 +1,23 @@
 const roomData = [
     {
         name: "Pets",
-        users: ["User 1", "User 2", "User 3", "User 4"]
+        users: ["Tiffany Pettus", "Leigh Woodell", "Chong Delaughter", "Tory Loveall"]
     },
     {
         name: "Sports",
-        users: ["User 1", "User 2", "User 3", "User 4"]
+        users: ["Ethan Eudy", "Darrell Viveiros", "Janel Baumgart", "Anderson Langlais"]
     },
     {
         name: "Movies",
-        users: ["User 1", "User 2", "User 3", "User 4"]
+        users: [" Tim Stanley", " Mary Lockett", "Siobhan Coldwell", "Carolina Berti"]
     },
     {
         name: "Books",
-        users: ["User 1", "User 2", "User 3", "User 4"]
+        users: ["Christine Masser", "Dorathy Crisp", "Kate Chock", "Scottie Fregoso"]
     },
     {
         name: "Games",
-        users: ["User 1", "User 2", "User 3", "User 4"]
+        users: ["Niki Kearney", "Victor Sharon", "Lizzie Viggiano", "Grant Threatt"]
     }
 ];
 

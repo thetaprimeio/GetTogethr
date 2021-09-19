@@ -6,8 +6,7 @@ import './RoomAllocationPanel.css';
 import roomData from './RoomData';
 
 const RoomAllocationPanel = () => (
-    <div>
-        <hr/>
+    <div class="background-box">
         <h2>Room Allocation</h2>
         <div class="flex-container">
         {roomData.map((entry) => (

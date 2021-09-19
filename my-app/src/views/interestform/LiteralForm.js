@@ -13,12 +13,6 @@ function LiteralForm(){
         onSubmit={(values, { setSubmitting }) => {
 
             setTimeout(() => {
-<<<<<<< HEAD
-              //RoomData.length
-              for (let i = 0; i < 1; i++) {
-                compare();
-              } 
-=======
               
               if(values.interest1 == "Dogs" || values.interest1 == "Cats" || values.interest2 == "Dogs" || values.interest2 == "Cats" 
               || values.interest3 == "Dogs" || values.interest3 == "Cats" || values.interest4 == "Dogs" || values.interest4 == "Cats"
@@ -45,9 +39,8 @@ function LiteralForm(){
               || values.interest5 == "Fortnite" || values.interest5 == "Amoung Us"){ // Games Room
                 RoomData[4].users.push(values.name);
               }
->>>>>>> db5e078fe3c4369aac9d74f9116679c324f4f23c
 
-              alert(JSON.stringify(values, null, 2));
+              alert("Thank you for completing the interest form. At the time of the event you will be assigned to a room based off of shared interest with  other participants.");
    
               setSubmitting(false);
    
@@ -86,7 +79,7 @@ function LiteralForm(){
               <br/>
               <p></p>
               <button type="submit" disabled={isSubmitting}>Submit</button>
-   
+
             </Form></center>
    
           )}
