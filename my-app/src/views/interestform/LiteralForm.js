@@ -6,7 +6,7 @@ import dandelion from 'node-dandelion';
 
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
-var dandelion = require("node-dandelion");
+//var dandelion = require("node-dandelion");
 dandelion.configure({
   "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
   "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
@@ -81,20 +81,11 @@ function LiteralForm(){
             
               setSubmitting(false);
 
-<<<<<<< HEAD
-            // setTimeout(() => {
-              
-            //   dandelion.configure({
-            //     "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
-            //     "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
-            //   });
-=======
             setTimeout(() => {
               //RoomData.length
               for (let i = 0; i < 1; i++) {
                 compare();
               } 
->>>>>>> 16b941b42e663af133014e3b14b5c08c1ecb30f5
 
             //   let string1Val = "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F" + values.interest1
             //   console.log(string1Val)
