@@ -1,6 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import dandelion from 'node-dandelion';
+//var dandelion = require("node-dandelion");
+
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
 function LiteralForm(){
@@ -9,18 +12,72 @@ function LiteralForm(){
     <Formik
         initialValues={{ email: '', name: '', interest1: '', interest2: '', interest3: '', interest4: '', interest5: ''}}
         onSubmit={(values, { setSubmitting }) => {
+              dandelion.configure({
+                "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
+                "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
+              });
 
-            setTimeout(() => {
-              
-              RoomData[0].users.push(values.name);
-
-              alert(JSON.stringify(values, null, 2));
-   
+              let string1Val = "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F" + values.interest1
+              console.log(string1Val)
+              dandelion.txtSim(
+                {
+                  "string1": {
+                    "type":"url",
+                    "value": string1Val
+                  },
+                  "string2":{
+                    "type":"url",
+                    "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
+                  },  
+                  "lang":"en",
+                  "bow":"never"
+                },
+                function(results){
+                    console.log(results.similarity)
+                    RoomData[0].users.push(results.similarity);
+                }
+              );
+            
               setSubmitting(false);
+
+            // setTimeout(() => {
+              
+            //   dandelion.configure({
+            //     "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
+            //     "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
+            //   });
+
+            //   let string1Val = "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F" + values.interest1
+            //   console.log(string1Val)
+            //   dandelion.txtSim(
+            //     {
+            //       "string1": {
+            //         "type":"url",
+            //         "value": string1Val
+            //       },
+            //       "string2":{
+            //         "type":"url",
+            //         "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
+            //       },  
+            //       "lang":"en",
+            //       "bow":"never"
+            //     },
+            //     function(results){
+            //         console.log(results.similarity)
+            //         RoomData[0].users.push(results.similarity);
+            //         return
+            //     }
+            //   );
+
+            //   RoomData[0].users.push(values.name);
+
+            //   alert(JSON.stringify(values, null, 2));
    
-            }, 400);
+            //   setSubmitting(false);
    
-          }}
+            }//, 400);
+   
+          }
    
         >
    
