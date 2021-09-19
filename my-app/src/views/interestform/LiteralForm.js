@@ -3,6 +3,47 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
+var dandelion = require("node-dandelion");
+dandelion.configure({
+  "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
+  "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
+});
+
+
+async function compare(){
+  let promise = new Promise((resolve, reject) => {
+    if(true){
+      dandelion.txtSim(
+      {
+        "string1": {
+          "type":"url",
+          "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBatman"
+        },
+        "string2":{
+          "type":"url",
+          "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
+        },
+        "lang":"en",
+        "bow":"never"
+        },
+        function(results){
+          console.log(results.similarity)
+        }
+      );
+      resolve("success")
+    }
+    else{
+      reject("failed")
+    }
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+  console.log("test");
+}
+
+
 function LiteralForm(){
     
     return(
@@ -11,8 +52,10 @@ function LiteralForm(){
         onSubmit={(values, { setSubmitting }) => {
 
             setTimeout(() => {
-              
-              RoomData[0].users.push(values.name);
+              //RoomData.length
+              for (let i = 0; i < 1; i++) {
+                compare();
+              } 
 
               alert(JSON.stringify(values, null, 2));
    
