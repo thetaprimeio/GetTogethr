@@ -19,22 +19,22 @@ function LiteralForm(){
               }
               else if(values.interest1 == "Hockey" || values.interest1 == "Soccer" || values.interest2 == "Hockey" || values.interest2 == "Soccer" 
               || values.interest3 == "Hockey" || values.interest3 == "Soccer" || values.interest4 == "Hockey" || values.interest4 == "Soccer"
-              || values.interest5 == "Hockey" || values.interest5 == "Soccer"){ // Pets Room
+              || values.interest5 == "Hockey" || values.interest5 == "Soccer"){ // Sports Room
                 RoomData[1].users.push(values.name);
               }
               else if(values.interest1 == "Avengers" || values.interest1 == "Fast and Furious" || values.interest2 == "Avengers" || values.interest2 == "Fast and Furious" 
               || values.interest3 == "Avengers" || values.interest3 == "Fast and Furious" || values.interest4 == "Avengers" || values.interest4 == "Fast and Furious"
-              || values.interest5 == "Avengers" || values.interest5 == "Fast and Furious"){ // Pets Room
+              || values.interest5 == "Avengers" || values.interest5 == "Fast and Furious"){ // Movies Room
                 RoomData[2].users.push(values.name);
               }
               else if(values.interest1 == "Franz Kafka" || values.interest1 == "Stephen King" || values.interest2 == "Franz Kafka" || values.interest2 == "Stephen King" 
               || values.interest3 == "Franz Kafka" || values.interest3 == "Stephen King" || values.interest4 == "Franz Kafka" || values.interest4 == "Stephen King"
-              || values.interest5 == "Franz Kafka" || values.interest5 == "Stephen King"){ // Pets Room
+              || values.interest5 == "Franz Kafka" || values.interest5 == "Stephen King"){ // Books Room
                 RoomData[3].users.push(values.name);
               }
               else if(values.interest1 == "Fortnite" || values.interest1 == "Amoung Us" || values.interest2 == "Fortnite" || values.interest2 == "Amoung Us" 
               || values.interest3 == "Fortnite" || values.interest3 == "Amoung Us" || values.interest4 == "Fortnite" || values.interest4 == "Amoung Us"
-              || values.interest5 == "Fortnite" || values.interest5 == "Amoung Us"){ // Pets Room
+              || values.interest5 == "Fortnite" || values.interest5 == "Amoung Us"){ // Games Room
                 RoomData[4].users.push(values.name);
               }
 
