@@ -1,51 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import dandelion from 'node-dandelion';
-//var dandelion = require("node-dandelion");
-
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
-
-var dandelion = require("node-dandelion");
-dandelion.configure({
-  "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
-  "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
-});
-
-
-async function compare(){
-  let promise = new Promise((resolve, reject) => {
-    if(true){
-      dandelion.txtSim(
-      {
-        "string1": {
-          "type":"url",
-          "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBatman"
-        },
-        "string2":{
-          "type":"url",
-          "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
-        },
-        "lang":"en",
-        "bow":"never"
-        },
-        function(results){
-          console.log(results.similarity)
-        }
-      );
-      resolve("success")
-    }
-    else{
-      reject("failed")
-    }
-  });
-
-  let result = await promise; // wait until the promise resolves (*)
-
-  alert(result); // "done!"
-  console.log("test");
-}
-
 
 function LiteralForm(){
     
@@ -53,80 +9,42 @@ function LiteralForm(){
     <Formik
         initialValues={{ email: '', name: '', interest1: '', interest2: '', interest3: '', interest4: '', interest5: ''}}
         onSubmit={(values, { setSubmitting }) => {
-              dandelion.configure({
-                "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
-                "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
-              });
 
-              let string1Val = "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F" + values.interest1
-              console.log(string1Val)
-              dandelion.txtSim(
-                {
-                  "string1": {
-                    "type":"url",
-                    "value": string1Val
-                  },
-                  "string2":{
-                    "type":"url",
-                    "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
-                  },  
-                  "lang":"en",
-                  "bow":"never"
-                },
-                function(results){
-                    console.log(results.similarity)
-                    RoomData[0].users.push(results.similarity);
-                }
-              );
-            
-              setSubmitting(false);
-
-<<<<<<< HEAD
-            // setTimeout(() => {
-              
-            //   dandelion.configure({
-            //     "app_key":"66d73cb67dcc43f59aa5681ac3cbc62c",
-            //     "app_id":"66d73cb67dcc43f59aa5681ac3cbc62c"
-            //   });
-=======
             setTimeout(() => {
-              //RoomData.length
-              for (let i = 0; i < 1; i++) {
-                compare();
-              } 
->>>>>>> 16b941b42e663af133014e3b14b5c08c1ecb30f5
+              
+              if(values.interest1 == "Dogs" || values.interest1 == "Cats" || values.interest2 == "Dogs" || values.interest2 == "Cats" 
+              || values.interest3 == "Dogs" || values.interest3 == "Cats" || values.interest4 == "Dogs" || values.interest4 == "Cats"
+              || values.interest5 == "Dogs" || values.interest5 == "Cats"){ // Pets Room
+                RoomData[0].users.push(values.name);
+              }
+              else if(values.interest1 == "Hockey" || values.interest1 == "Soccer" || values.interest2 == "Hockey" || values.interest2 == "Soccer" 
+              || values.interest3 == "Hockey" || values.interest3 == "Soccer" || values.interest4 == "Hockey" || values.interest4 == "Soccer"
+              || values.interest5 == "Hockey" || values.interest5 == "Soccer"){ // Pets Room
+                RoomData[1].users.push(values.name);
+              }
+              else if(values.interest1 == "Avengers" || values.interest1 == "Fast and Furious" || values.interest2 == "Avengers" || values.interest2 == "Fast and Furious" 
+              || values.interest3 == "Avengers" || values.interest3 == "Fast and Furious" || values.interest4 == "Avengers" || values.interest4 == "Fast and Furious"
+              || values.interest5 == "Avengers" || values.interest5 == "Fast and Furious"){ // Pets Room
+                RoomData[2].users.push(values.name);
+              }
+              else if(values.interest1 == "Franz Kafka" || values.interest1 == "Stephen King" || values.interest2 == "Franz Kafka" || values.interest2 == "Stephen King" 
+              || values.interest3 == "Franz Kafka" || values.interest3 == "Stephen King" || values.interest4 == "Franz Kafka" || values.interest4 == "Stephen King"
+              || values.interest5 == "Franz Kafka" || values.interest5 == "Stephen King"){ // Pets Room
+                RoomData[3].users.push(values.name);
+              }
+              else if(values.interest1 == "Fortnite" || values.interest1 == "Amoung Us" || values.interest2 == "Fortnite" || values.interest2 == "Amoung Us" 
+              || values.interest3 == "Fortnite" || values.interest3 == "Amoung Us" || values.interest4 == "Fortnite" || values.interest4 == "Amoung Us"
+              || values.interest5 == "Fortnite" || values.interest5 == "Amoung Us"){ // Pets Room
+                RoomData[4].users.push(values.name);
+              }
 
-            //   let string1Val = "https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F" + values.interest1
-            //   console.log(string1Val)
-            //   dandelion.txtSim(
-            //     {
-            //       "string1": {
-            //         "type":"url",
-            //         "value": string1Val
-            //       },
-            //       "string2":{
-            //         "type":"url",
-            //         "value":"https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpider-Man"
-            //       },  
-            //       "lang":"en",
-            //       "bow":"never"
-            //     },
-            //     function(results){
-            //         console.log(results.similarity)
-            //         RoomData[0].users.push(results.similarity);
-            //         return
-            //     }
-            //   );
-
-            //   RoomData[0].users.push(values.name);
-
-            //   alert(JSON.stringify(values, null, 2));
+              alert(JSON.stringify(values, null, 2));
    
-            //   setSubmitting(false);
+              setSubmitting(false);
    
-            }//, 400);
+            }, 400);
    
-          }
+          }}
    
         >
    
