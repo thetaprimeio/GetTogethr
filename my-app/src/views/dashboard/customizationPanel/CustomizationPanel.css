@@ -1,0 +1,13 @@
+.padding{
+    margin-bottom: 15px;
+}
+
+
+Field, label {
+    display:block;
+}
+
+
+.question-box{
+    float: center;
+}
