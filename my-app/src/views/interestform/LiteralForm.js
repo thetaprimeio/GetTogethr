@@ -3,10 +3,12 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 
+//<link rel="stylesheet" href="LiteralForm.css">
+
 function LiteralForm(){
     
     return(
-    <Formik
+    <center><Formik
         initialValues={{ email: '', name: '', interest1: '', interest2: '', interest3: '', interest4: '', interest5: ''}}
         onSubmit={(values, { setSubmitting }) => {
 
@@ -50,35 +52,38 @@ function LiteralForm(){
    
           {({ isSubmitting }) => (
    
-            <Form>
+            <center><Form>
 
-              <label htmlFor="name">Name</label>
+              <p></p>
+              <label htmlFor="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: </label>
               <Field type="text" name="name" />
               <br/>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: &nbsp;</label>
               <Field type="email" name="email" />
               <br/>
-              <label htmlFor="interest1">Interest 1.</label>
+              <p></p>
+              <label id="test" htmlFor="interest1">Interest 1. </label>
               <Field type="text" name="interest1" />
               <br/>
-              <label htmlFor="interest2">Interest 2.</label>
+              <label htmlFor="interest2">Interest 2. </label>
               <Field type="text" name="interest2" />
               <br/>
-              <label htmlFor="interest3">Interest 3.</label>
+              <label htmlFor="interest3">Interest 3. </label>
               <Field type="text" name="interest3" />
               <br/>
-              <label htmlFor="interest4">Interest 4.</label>
+              <label htmlFor="interest4">Interest 4. </label>
               <Field type="text" name="interest4" />
               <br/>
-              <label htmlFor="interest5">Interest 5.</label>
+              <label htmlFor="interest5">Interest 5. </label>
               <Field type="text" name="interest5" />
               <br/>
+              <p></p>
               <button type="submit" disabled={isSubmitting}>Submit</button>
    
-            </Form>
+            </Form></center>
    
           )}
-    </Formik>
+    </Formik></center>
     );
 }
 
