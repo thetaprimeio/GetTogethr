@@ -16,11 +16,11 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    background-color: #76A2BE;
+    background-color: #cabe90;
   }
   
   .flex-item {
-    background: tomato;
+    /* background: tomato; */
     border-style: solid;
     border-color: black;
     padding: 5px;
@@ -40,12 +40,12 @@
   }
 
   .hideButton{
-    background: #76A2BE;
-    border-color: #76A2BE;
-    text-emphasis-color: #76A2BE;
-    text-decoration-color: #76A2BE;
-    color: #76A2BE;
-    border-color: #76A2BE;
+    background: #cabe90;
+    border-color: #cabe90;
+    text-emphasis-color: #cabe90;
+    text-decoration-color: #cabe90;
+    color: #cabe90;
+    border-color: #cabe90;
     border-style: solid;
 
   }

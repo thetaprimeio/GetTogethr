@@ -7,6 +7,8 @@ import CustomizationPanel from './customizationPanel/CustomizationPanel';
 import RoomAllocationPanel from './roomAllocationPanel/RoomAllocationPanel';
 import PlatformsPanel from './platformsPanel/PlatformsPanel';
 
+import GetTogethrLogo from './../../images/GetTogthrLogo.png';
+
 class Dashboard extends React.Component{
     constructor () {
         super()
@@ -37,6 +39,7 @@ class Dashboard extends React.Component{
                 {/* <hr> */}
                 <div class="flex-container">
                     <CustomizationPanel class="flex-item"/>
+                    {/* <img class="flex-item" scr={GetTogethrLogo}></img> */}
                     <PlatformsPanel class="flex-item"/>
                 </div>
                 {/* <dir class="roomContainer" id="roomtContainer">

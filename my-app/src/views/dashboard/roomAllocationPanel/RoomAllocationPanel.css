@@ -22,7 +22,7 @@
   .flex-item {
     /* background: tomato; */
     border-style: solid;
-    border-color: #76A2BE;
+    border-color: #cabe90;
     padding: 5px;
     width: 200px;
     height: 150px;
@@ -42,8 +42,9 @@
     width: 300px;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: #76A2BE;
-
+    background-color: #212f3c;
+    /* opacity: 0.75; */
+/*cabe90 */
   }
 
   .room-title {
@@ -65,5 +66,9 @@
   }
 
   .background-box{
-    background-color: #76A2BE;
+    background-color: #cabe90;
+  }
+
+  .title{
+    margin-left: 43px;
   }

@@ -8,7 +8,8 @@ import RoomData from '../dashboard/roomAllocationPanel/RoomData';
 function LiteralForm(){
     
     return(
-    <center><Formik
+    <center>
+      <Formik
         initialValues={{ email: '', name: '', interest1: '', interest2: '', interest3: '', interest4: '', interest5: ''}}
         onSubmit={(values, { setSubmitting }) => {
 
